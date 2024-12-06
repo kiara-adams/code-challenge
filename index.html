@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>VISIO Page</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="branding-logo">
+        <img src="./Path 1.png" alt="VISIO Logo" />
+      </div>
+      <div class="nav-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <div class="blue-overlay">Look beyond the ordinary</div>
+    <div class="black-overlay"></div>
+    <div class="image-slider">
+      <div class="slider-track">
+        <div class="slide-item">
+          <img src="./sergey-pesterev-FRMt.png" alt="first-img" />
+        </div>
+        <div class="slide-item">
+          <img src="/assets/sergey-pesterev-FRMt.png" alt="second-img" />
+        </div>
+        <div class="slide-item">
+          <img src="/assets/sergey-pesterev-FRMt.png" alt="third-img" />
+        </div>
+      </div>
+      <button class="slider-btn btn-next">&gt;</button>
+    </div>
+    <div class="intro-container">
+      <div class="intro-text">
+        <p>
+          Visio is an investment management firm initially founded by Patrice
+          Moyal in 2003. The nimble, highly focused and dynamic team manages
+          assets across listed strategies for a diversified client base that
+          includes some of the world’s largest and most sophisticated investors.
+        </p>
+      </div>
+      <div class="icon-group">
+        <img src="./Rectangle 10 (1).png" alt="Dash" class="icon-item" />
+        <img src="./Path 4 (1).png" alt="Greater Than" class="icon-item" />
+        <img src="./Path 2 (2).png" alt="Backslash" class="icon-item" />
+        <img src="./Path 3 (1).png" alt="Smile" class="icon-item" />
+        <img src="./Path 5 (1).png"  alt="Bar" class="icon-item" />
+        <img src="./Rectangle 9 (1).png" alt="Bar" class="icon-item" />
+        <img src="./Path 6 (1).png" alt="Bar" class="icon-item" />
+      </div>
+    </div>
+    <div class="cta-panels">
+      <div class="cta-box">
+        <img src="./Path 26.png" alt="Difference Icon" class="cta-icon" />
+        <a href="#" class="cta-text">The Visio<span class="highlight">difference</span></a>
+      </div>
+      <div class="cta-box">
+        <img src="./Path 26.png" alt="Difference Icon" class="cta-icon" />
+        <a href="#" class="cta-text">Meet the<span class="highlight">Visio team</span></a>
+      </div>
+      <div class="cta-box">
+        <img src="./Path 26.png" alt="Difference Icon" class="cta-icon" />
+        <a href="#" class="cta-text">Our funds and<span class="highlight">investments</span></a>
+      </div>
+    </div>
+    <div class="extra-panels">
+      <div class="extra-box">
+        hedge funds
+        <img src="./Path 26.png" alt="Arrow" class="extra-arrow" />
+      </div>
+      <div class="extra-box">
+        unit trusts
+        <img src="./Path 26.png" alt="Arrow" class="extra-arrow" />
+      </div>
+      <div class="extra-box">
+        segregated mandates
+        <img src="./Path 26.png" alt="Arrow" class="extra-arrow" />
+      </div>
+      <div class="extra-box">
+        Africa funds
+        <img src="./Path 26.png" alt="Arrow" class="extra-arrow" />
+      </div>
+      <div class="extra-box">
+        fund performance
+        <img src="./Path 26.png" alt="Arrow" class="extra-arrow" />
+      </div>
+      <div class="extra-box">
+        risk management
+        <img src="./Path 26.png" alt="Arrow" class="extra-arrow" />
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        const $sliderTrack = $(".slider-track");
+        const $slides = $(".slide-item");
+        const slideWidth = $slides.outerWidth(true); // Include margin if any
+        let currentSlide = 0;
+        $(".btn-next").click(function () {
+          if (currentSlide < $slides.length - 1) {
+            currentSlide++;
+            $sliderTrack.css("transform", `translateX(-${currentSlide * slideWidth}px)`);
+          } else {
+            currentSlide = 0; // Loop back to the first slide
+            $sliderTrack.css("transform", "translateX(0)");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
